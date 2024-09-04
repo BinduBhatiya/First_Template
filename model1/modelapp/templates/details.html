@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details page</title>
+</head>
+<body>
+    {% extends "master.html" %}
+
+    {% block content %}
+        <h1>
+            {{ mymember.first_nm }} {{ mymember.last_nm }}
+        </h1>
+        <p>
+            Phone : {{ mymember.phone }}
+        </p>
+        <p>
+            Joining Date : {{ mymember.joined_date }}
+        </p>
+        <hr>
+        <p>
+            Bake to : <a href="/modelapp">Home</a>
+        </p>
+    {% endblock %}
+</body>
+</html>

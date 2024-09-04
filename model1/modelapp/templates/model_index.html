@@ -6,7 +6,21 @@
     <title>Model Example</title>
 </head>
 <body>
-    <h1>My First Model Exercise :</h1>
-    <hr>
+    {% extends "master.html" %}
+
+    {% block content %}
+        <p><a href="/">HOME</a></p>
+        <h1>My First Django Project....</h1>
+        <ul>
+            {% for x in mymembers %}
+                <li>
+                    <a href="details/{{ x.id }}">
+                        {{ x.first_nm }}
+                        {{ x.last_nm }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
 </body>
 </html>
